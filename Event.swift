@@ -4,11 +4,11 @@ import Foundation
 typealias EventIdentifier = String
 
 
-protocol Event: EventNSNotificationAdapter {
+protocol Event: NotificationAdapter {
     static var identifier: EventIdentifier { get }
 }
 
-protocol EventNSNotificationAdapter {
+protocol NotificationAdapter {
     init(notification: Notification)
     
     var notification: Notification { get }
